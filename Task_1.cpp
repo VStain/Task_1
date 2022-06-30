@@ -22,7 +22,7 @@ int main()
     setlocale(LC_ALL, "Ru");
     
     Months month = Months::August;
-    int choice = static_cast<int>(month);
+    int requestedMonthNumber = static_cast<int>(month);
     
     cout << "1.  Январь " << endl <<
         "2.  Февраль" << endl <<
@@ -37,83 +37,73 @@ int main()
         "11. Ноябрь" << endl <<
         "12. Декабрь" << endl <<
         "Нажмите 0 чтобы выйти" << endl;
-    link: // сылка
+
     cout << endl << "Введите номер месяца: ";
-    cin >> choice;
+    cin >> requestedMonthNumber;
 
-    switch (choice)
+    while (requestedMonthNumber != 0) 
     {
-    case 1:
-        cout << endl << "Вы выбрали январь месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        switch (requestedMonthNumber)
+        {
+        case 1:
+            cout << endl << "Вы выбрали январь месяц" << endl;
+            break;
 
-    case 2:
-        cout << endl << "Вы выбрали февраль месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        case 2:
+            cout << endl << "Вы выбрали февраль месяц" << endl;
+            break;
 
-    case 3:
-        cout << endl << "Вы выбрали март месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        case 3:
+            cout << endl << "Вы выбрали март месяц" << endl;
+            break;
 
-    case 4:
-        cout << endl << "Вы выбрали апрель месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        case 4:
+            cout << endl << "Вы выбрали апрель месяц" << endl;
+            break;
 
-    case 5:
-        cout << endl << "Вы выбрали май месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        case 5:
+            cout << endl << "Вы выбрали май месяц" << endl;
+            break;
 
-    case 6:
-        cout << endl << "Вы выбрали июнь месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        case 6:
+            cout << endl << "Вы выбрали июнь месяц" << endl;
+            break;
 
-    case 7:
-        cout << endl << "Вы выбрали июль месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        case 7:
+            cout << endl << "Вы выбрали июль месяц" << endl;
+            break;
 
-    case 8:
-        cout << endl << "Вы выбрали август месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        case 8:
+            cout << endl << "Вы выбрали август месяц" << endl;
+            break;
 
-    case 9:
-        cout << endl << "Вы выбрали сентябрь месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        case 9:
+            cout << endl << "Вы выбрали сентябрь месяц" << endl;
+            break;
 
-    case 10:
-        cout << endl << "Вы выбрали октябрь месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        case 10:
+            cout << endl << "Вы выбрали октябрь месяц" << endl;
+            break;
 
-    case 11:
-        cout << endl << "Вы выбрали ноябрь месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        case 11:
+            cout << endl << "Вы выбрали ноябрь месяц" << endl;
+            break;
 
-    case 12:
-        cout << endl << "Вы выбрали декабрь месяц" << endl;
-        goto link; // сылка на 39 строку
-        break;
+        case 12:
+            cout << endl << "Вы выбрали декабрь месяц" << endl;
+            break;
 
-    case 0:
-         cout << "До свидания! ";
-         break;
+        case 0:
+            cout << "До свидания! ";
+            break;
 
-    default:
-        cout << endl << "Неправильный номер! Потворите ввод." << endl;
-        goto link; // сылка на 39 строку
-        break;
+        default:
+            cout << endl << "Неправильный номер! Потворите ввод." << endl;
+            break;
+        }
+        cout << endl << "Введите номер месяца: ";
+        cin >> requestedMonthNumber;
     }
-    
-    
 
     return 0;
 }
