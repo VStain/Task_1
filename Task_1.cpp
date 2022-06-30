@@ -45,51 +45,51 @@ int main()
     {
         switch (requestedMonthNumber)
         {
-        case 1:
+        case static_cast<int>(Months::January):
             cout << endl << "Вы выбрали январь месяц" << endl;
             break;
 
-        case 2:
+        case static_cast<int>(Months::February):
             cout << endl << "Вы выбрали февраль месяц" << endl;
             break;
 
-        case 3:
+        case static_cast<int>(Months::March):
             cout << endl << "Вы выбрали март месяц" << endl;
             break;
 
-        case 4:
+        case static_cast<int>(Months::April):
             cout << endl << "Вы выбрали апрель месяц" << endl;
             break;
 
-        case 5:
+        case static_cast<int>(Months::May):
             cout << endl << "Вы выбрали май месяц" << endl;
             break;
 
-        case 6:
+        case static_cast<int>(Months::June):
             cout << endl << "Вы выбрали июнь месяц" << endl;
             break;
 
-        case 7:
+        case static_cast<int>(Months::July):
             cout << endl << "Вы выбрали июль месяц" << endl;
             break;
 
-        case 8:
+        case static_cast<int>(Months::August):
             cout << endl << "Вы выбрали август месяц" << endl;
             break;
 
-        case 9:
+        case static_cast<int>(Months::September):
             cout << endl << "Вы выбрали сентябрь месяц" << endl;
             break;
 
-        case 10:
+        case static_cast<int>(Months::October):
             cout << endl << "Вы выбрали октябрь месяц" << endl;
             break;
 
-        case 11:
+        case static_cast<int>(Months::November):
             cout << endl << "Вы выбрали ноябрь месяц" << endl;
             break;
 
-        case 12:
+        case static_cast<int>(Months::December):
             cout << endl << "Вы выбрали декабрь месяц" << endl;
             break;
 
