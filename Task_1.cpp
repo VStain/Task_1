@@ -3,7 +3,6 @@ using namespace std;
 
 enum class Months
 {
-    //Exit = 1,
     January = 1,
     February,
     March,
@@ -17,6 +16,64 @@ enum class Months
     November,
     December,
 };
+
+std::string Case_months(int month_number)
+{
+    switch (static_cast<Months>(month_number))
+    {
+    case Months::January:
+        return "Вы выбрали январь месяц";
+        break;
+
+    case Months::February:
+        return "Вы выбрали февраль месяц";
+        break;
+
+    case Months::March:
+        return "Вы выбрали март месяц";
+        break;
+
+    case Months::April:
+        return "Вы выбрали апрель месяц";
+        break;
+
+    case Months::May:
+        return "Вы выбрали май месяц";
+        break;
+
+    case Months::June:
+        return "Вы выбрали июнь месяц";
+        break;
+
+    case Months::July:
+        return "Вы выбрали июль месяц";
+        break;
+
+    case Months::August:
+        return "Вы выбрали август месяц";
+        break;
+
+    case Months::September:
+        return "Вы выбрали сентябрь месяц";
+        break;
+
+    case Months::October:
+        return "Вы выбрали октябрь месяц";
+        break;
+
+    case Months::November:
+        return "Вы выбрали ноябрь месяц";
+        break;
+
+    case Months::December:
+        return "Вы выбрали декабрь месяц";
+        break;
+
+    default:
+        return "Неправильный номер! Потворите ввод.";
+        break;
+    }
+}
 
 int main()
 {
@@ -37,82 +94,21 @@ int main()
         "10. Октябрь" << endl <<
         "11. Ноябрь" << endl <<
         "12. Декабрь" << endl <<
-        "Нажмите 0 чтобы выйти" << endl;
+        "Нажмите 0 чтобы выйти" << endl;  
 
-    cout << endl << "Введите номер месяца: ";
-    cin >> requestedMonthNumber;
-
-    while (requestedMonthNumber != 0) 
+    do
     {
-        /*if (requestedMonthNumber == 0)
-        {
-            cout << "До свидания! ";
-        }*/
-        switch (static_cast<Months>(requestedMonthNumber))
-        {
-        case Months::January:
-            cout << endl << "Вы выбрали январь месяц" << endl;
-            break;
-
-        case Months::February:
-            cout << endl << "Вы выбрали февраль месяц" << endl;
-            break;
-
-        case Months::March:
-            cout << endl << "Вы выбрали март месяц" << endl;
-            break;
-
-        case Months::April:
-            cout << endl << "Вы выбрали апрель месяц" << endl;
-            break;
-
-        case Months::May:
-            cout << endl << "Вы выбрали май месяц" << endl;
-            break;
-
-        case Months::June:
-            cout << endl << "Вы выбрали июнь месяц" << endl;
-            break;
-
-        case Months::July:
-            cout << endl << "Вы выбрали июль месяц" << endl;
-            break;
-
-        case Months::August:
-            cout << endl << "Вы выбрали август месяц" << endl;
-            break;
-
-        case Months::September:
-            cout << endl << "Вы выбрали сентябрь месяц" << endl;
-            break;
-
-        case Months::October:
-            cout << endl << "Вы выбрали октябрь месяц" << endl;
-            break;
-
-        case Months::November:
-            cout << endl << "Вы выбрали ноябрь месяц" << endl;
-            break;
-
-        case Months::December:
-            cout << endl << "Вы выбрали декабрь месяц" << endl;
-            break;
-
-        /*case Months::Exit:
-            cout << "До свидания! ";
-            break;*/
-
-        default:
-            cout << endl << "Неправильный номер! Потворите ввод." << endl;
-            break;
-        }
-
-        
         cout << endl << "Введите номер месяца: ";
         cin >> requestedMonthNumber;
-    }
-     
-    cout << "До свидания! ";
+        if (requestedMonthNumber == 0)
+        {
+            cout << "До свидания! " << endl;
+            break;
+        }
+        cout << Case_months(requestedMonthNumber) << endl;
+
+    } while (requestedMonthNumber != 0);
+
 
     return 0;
 }
