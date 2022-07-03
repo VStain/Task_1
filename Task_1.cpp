@@ -3,8 +3,8 @@ using namespace std;
 
 enum class Months
 {
-    Exit = 0,
-    January ,
+    //Exit = 1,
+    January = 1,
     February,
     March,
     April,
@@ -98,9 +98,9 @@ int main()
             cout << endl << "Вы выбрали декабрь месяц" << endl;
             break;
 
-        case Months::Exit:
+        /*case Months::Exit:
             cout << "До свидания! ";
-            break;
+            break;*/
 
         default:
             cout << endl << "Неправильный номер! Потворите ввод." << endl;
@@ -111,6 +111,8 @@ int main()
         cout << endl << "Введите номер месяца: ";
         cin >> requestedMonthNumber;
     }
+     
+    cout << "До свидания! ";
 
     return 0;
 }
