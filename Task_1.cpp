@@ -69,9 +69,9 @@ std::string Case_months(int month_number)
         return "Вы выбрали декабрь месяц";
         break;
 
-    default:
+    /*default:
         return "Неправильный номер! Потворите ввод.";
-        break;
+        break;*/
     }
 }
 
@@ -100,6 +100,11 @@ int main()
     {
         cout << endl << "Введите номер месяца: ";
         cin >> requestedMonthNumber;
+        if (requestedMonthNumber < 0 || requestedMonthNumber > 12) 
+        {
+            std::cout << "Неправильный номер! Повторите ввод." << endl;
+            continue;
+        }
         if (requestedMonthNumber == 0)
         {
             cout << "До свидания! " << endl;
